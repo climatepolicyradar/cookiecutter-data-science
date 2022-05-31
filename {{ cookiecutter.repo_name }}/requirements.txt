@@ -1,11 +1,9 @@
-# local package
--e .
-
-# external requirements
 click
-Sphinx
-coverage
 awscli
 flake8
 black
-python-dotenv>=0.5.1
+python-dotenv>=0.20.0
+pre-commit
+jupyterlab
+ipywidgets
+tqdm

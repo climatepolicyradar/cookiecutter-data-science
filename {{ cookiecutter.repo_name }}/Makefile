@@ -14,9 +14,10 @@ PROJECT_NAME = {{ cookiecutter.repo_name }}
 #################################################################################
 
 ## Install Python Dependencies
-requirements: test_environment
+install:
 	python -m pip install -U pip setuptools wheel
 	python -m pip install -r requirements.txt
+	pre-commit install
 
 ## Make Dataset
 data: requirements
@@ -46,11 +47,6 @@ ifeq (default,$(PROFILE))
 else
 	aws s3 sync s3://$(BUCKET)/data/ data/ --profile $(PROFILE)
 endif
-
-#################################################################################
-# PROJECT RULES                                                                 #
-#################################################################################
-
 
 
 #################################################################################
