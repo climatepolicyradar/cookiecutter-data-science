@@ -5,6 +5,7 @@ and its sub-folders, are not version-controlled.
 
 The sub-folders should be used as follows:
 
+- `s3`: data synced with an S3 path
 - `external`: any data that will not be processed at all, such as reference data;
 - `raw`: any raw data before any processing;
 - `interim`: any raw data that has been partially processed and, for whatever reason,
@@ -24,4 +25,5 @@ DIR_DATA_EXTERNAL = os.getenv("DIR_DATA_EXTERNAL")
 DIR_DATA_RAW = os.getenv("DIR_DATA_RAW")
 DIR_DATA_INTERIM = os.getenv("DIR_DATA_INTERIM")
 DIR_DATA_PROCESSED = os.getenv("DIR_DATA_PROCESSED")
+DIR_DATA_S3 = os.getenv("DIR_DATA_S3")
 ```
