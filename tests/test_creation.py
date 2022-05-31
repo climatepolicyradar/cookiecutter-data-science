@@ -32,15 +32,6 @@ class TestCookieSetup(object):
         else:
             assert project.name == 'project_name'
 
-    def test_author(self):
-        setup_ = self.path / 'setup.py'
-        args = ['python', str(setup_), '--author']
-        p = check_output(args).decode('ascii').strip()
-        if pytest.param.get('author_name'):
-            assert p == 'DrivenData'
-        else:
-            assert p == 'Your name (or your organization/company/team)'
-
     def test_readme(self):
         readme_path = self.path / 'README.md'
         assert readme_path.exists()
