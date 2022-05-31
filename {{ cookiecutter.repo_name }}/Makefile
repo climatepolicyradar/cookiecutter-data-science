@@ -18,6 +18,7 @@ install:
 	python -m pip install -U pip setuptools wheel
 	python -m pip install -r requirements.txt
 	pre-commit install
+	cp .env.example .env
 
 ## Make Dataset
 data: requirements
