@@ -44,9 +44,9 @@ endif
 ## Download Data from S3
 sync_data_from_s3:
 ifeq (default,$(PROFILE))
-	aws s3 sync s3://$(S3PATH) data/s3
+	aws s3 sync s3://$(S3PATH) data
 else
-	aws s3 sync s3://$(S3PATH) data/s3 --profile $(PROFILE)
+	aws s3 sync s3://$(S3PATH) data --profile $(PROFILE)
 endif
 
 
